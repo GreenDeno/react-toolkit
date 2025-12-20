@@ -6,7 +6,7 @@ local React = require(Libraries.React)
 local createElement = React.createElement
 
 export type Props = {
-	MaxSize: React.PropBinding<Vector2>?,
+	MaxSize: React.Bindable<Vector2>?,
 }
 
 return {

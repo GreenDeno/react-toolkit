@@ -12,32 +12,32 @@ local TextConstraints = require(Constraints.TextConstraints)
 local useTransparencyModifier = require(Hooks.useTransparencyModifier)
 local createElement = React.createElement
 
-type PropBinding<T> = React.PropBinding<T>
+type Bindable<T> = React.Bindable<T>
 
 return function(props: {
-	Size: PropBinding<UDim2>?,
-	Position: PropBinding<UDim2>?,
-	AnchorPoint: PropBinding<Vector2>?,
+	Size: Bindable<UDim2>?,
+	Position: Bindable<UDim2>?,
+	AnchorPoint: Bindable<Vector2>?,
 
-	BackgroundTransparency: PropBinding<number>?,
-	BackgroundColor3: PropBinding<Color3>?,
+	BackgroundTransparency: Bindable<number>?,
+	BackgroundColor3: Bindable<Color3>?,
 
-	Visible: PropBinding<boolean>?,
-	Rotation: PropBinding<number>?,
-	ZIndex: PropBinding<number>?,
-	LayoutOrder: PropBinding<number>?,
-	AutomaticSize: PropBinding<Enum.AutomaticSize>?,
+	Visible: Bindable<boolean>?,
+	Rotation: Bindable<number>?,
+	ZIndex: Bindable<number>?,
+	LayoutOrder: Bindable<number>?,
+	AutomaticSize: Bindable<Enum.AutomaticSize>?,
 
-	TextScaled: PropBinding<boolean>?,
-	TextWrapped: PropBinding<boolean>?,
-	TextTruncate: PropBinding<Enum.TextTruncate>?,
-	TextSize: PropBinding<number>?,
-	TextTransparency: PropBinding<number>?,
-	Text: PropBinding<string>?,
-	TextColor3: PropBinding<Color3>?,
-	TextXAlignment: PropBinding<Enum.TextXAlignment>?,
-	TextYAlignment: PropBinding<Enum.TextYAlignment>?,
-	RichText: PropBinding<boolean>?,
+	TextScaled: Bindable<boolean>?,
+	TextWrapped: Bindable<boolean>?,
+	TextTruncate: Bindable<Enum.TextTruncate>?,
+	TextSize: Bindable<number>?,
+	TextTransparency: Bindable<number>?,
+	Text: Bindable<string>?,
+	TextColor3: Bindable<Color3>?,
+	TextXAlignment: Bindable<Enum.TextXAlignment>?,
+	TextYAlignment: Bindable<Enum.TextYAlignment>?,
+	RichText: Bindable<boolean>?,
 	Font: string?,
 	FontWeight: Enum.FontWeight?,
 

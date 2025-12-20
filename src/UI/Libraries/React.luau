@@ -33,6 +33,6 @@ export type React_ElementType = module.React_ElementType
 export type React_Node = module.React_Node
 
 -- Hacky prop value type
-export type PropBinding<T> = T | module.Binding<T>
+export type Bindable<T> = T | module.Binding<T>
 
 return module

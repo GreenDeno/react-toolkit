@@ -12,29 +12,29 @@ local ImageConstraints = require(Constraints.ImageConstraints)
 local useTransparencyModifier = require(Hooks.useTransparencyModifier)
 local createElement = React.createElement
 
-type PropBinding<T> = React.PropBinding<T>
+type Bindable<T> = React.Bindable<T>
 
 return function(props: {
-	Size: PropBinding<UDim2>?,
-	Position: PropBinding<UDim2>?,
-	AnchorPoint: PropBinding<Vector2>?,
+	Size: Bindable<UDim2>?,
+	Position: Bindable<UDim2>?,
+	AnchorPoint: Bindable<Vector2>?,
 
-	BackgroundTransparency: PropBinding<number>?,
-	BackgroundColor3: PropBinding<Color3>?,
+	BackgroundTransparency: Bindable<number>?,
+	BackgroundColor3: Bindable<Color3>?,
 
-	Visible: PropBinding<boolean>?,
-	Rotation: PropBinding<number>?,
-	ZIndex: PropBinding<number>?,
-	LayoutOrder: PropBinding<number>?,
-	Selectable: PropBinding<boolean>?,
+	Visible: Bindable<boolean>?,
+	Rotation: Bindable<number>?,
+	ZIndex: Bindable<number>?,
+	LayoutOrder: Bindable<number>?,
+	Selectable: Bindable<boolean>?,
 
-	Image: PropBinding<string>,
-	ImageColor3: PropBinding<Color3>?,
-	ImageTransparency: PropBinding<number>?,
-	ScaleType: PropBinding<Enum.ScaleType>?,
-	SliceCenter: PropBinding<Rect>?,
-	ImageRectOffset: PropBinding<Vector2>?,
-	ImageRectSize: PropBinding<Vector2>?,
+	Image: Bindable<string>,
+	ImageColor3: Bindable<Color3>?,
+	ImageTransparency: Bindable<number>?,
+	ScaleType: Bindable<Enum.ScaleType>?,
+	SliceCenter: Bindable<Rect>?,
+	ImageRectOffset: Bindable<Vector2>?,
+	ImageRectSize: Bindable<Vector2>?,
 
 	Transparency: useTransparencyModifier.TransparencyValue?,
 	children: { [any]: any }?,

@@ -12,24 +12,24 @@ local ContainerConstraints = require(Constraints.ContainerConstraints)
 local useSingleTransparencyModifier = require(Hooks.useSingleTransparencyModifier)
 local createElement = React.createElement
 
-type PropBinding<T> = React.PropBinding<T>
+type Bindable<T> = React.Bindable<T>
 
 return function(props: {
-	Size: PropBinding<UDim2>?,
-	Position: PropBinding<UDim2>?,
-	AnchorPoint: PropBinding<Vector2>?,
+	Size: Bindable<UDim2>?,
+	Position: Bindable<UDim2>?,
+	AnchorPoint: Bindable<Vector2>?,
 
-	BackgroundTransparency: PropBinding<number>?,
-	BackgroundColor3: PropBinding<Color3>?,
-	BorderSizePixel: PropBinding<number>?,
+	BackgroundTransparency: Bindable<number>?,
+	BackgroundColor3: Bindable<Color3>?,
+	BorderSizePixel: Bindable<number>?,
 
-	Active: PropBinding<boolean>?,
-	Visible: PropBinding<boolean>?,
-	ClipsDescendants: PropBinding<boolean>?,
-	Rotation: PropBinding<number>?,
-	ZIndex: PropBinding<number>?,
-	LayoutOrder: PropBinding<number>?,
-	AutomaticSize: PropBinding<Enum.AutomaticSize>?,
+	Active: Bindable<boolean>?,
+	Visible: Bindable<boolean>?,
+	ClipsDescendants: Bindable<boolean>?,
+	Rotation: Bindable<number>?,
+	ZIndex: Bindable<number>?,
+	LayoutOrder: Bindable<number>?,
+	AutomaticSize: Bindable<Enum.AutomaticSize>?,
 
 	Transparency: useSingleTransparencyModifier.TransparencyValue?,
 	reference: any?,

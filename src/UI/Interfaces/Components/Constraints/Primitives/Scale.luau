@@ -6,7 +6,7 @@ local React = require(Libraries.React)
 local createElement = React.createElement
 
 export type Props = {
-	Scale: React.PropBinding<number>?,
+	Scale: React.Bindable<number>?,
 }
 
 return {

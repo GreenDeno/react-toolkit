@@ -10,10 +10,10 @@ local useSingleTransparencyModifier = require(Hooks.useSingleTransparencyModifie
 local createElement = React.createElement
 
 export type Props = {
-	GradientColor: React.PropBinding<ColorSequence>?,
-	GradientRotation: React.PropBinding<number>?,
-	GradientOffset: React.PropBinding<Vector2>?,
-	GradientTransparency: React.PropBinding<NumberSequence>?,
+	GradientColor: React.Bindable<ColorSequence>?,
+	GradientRotation: React.Bindable<number>?,
+	GradientOffset: React.Bindable<Vector2>?,
+	GradientTransparency: React.Bindable<NumberSequence>?,
 
 	Transparency: useSingleTransparencyModifier.TransparencyValue?,
 }

@@ -10,13 +10,13 @@ local useSingleTransparencyModifier = require(Hooks.useSingleTransparencyModifie
 local createElement = React.createElement
 
 export type Props = {
-	StrokeColor: React.PropBinding<Color3>?,
-	StrokeThickness: React.PropBinding<number>?,
-	StrokeTransparency: React.PropBinding<number>?,
-	StrokeGradientColor: React.PropBinding<ColorSequence>?,
-	StrokeGradientRotation: React.PropBinding<number>?,
-	StrokeGradientOffset: React.PropBinding<Vector2>?,
-	StrokeGradientTransparency: React.PropBinding<NumberSequence>?,
+	StrokeColor: React.Bindable<Color3>?,
+	StrokeThickness: React.Bindable<number>?,
+	StrokeTransparency: React.Bindable<number>?,
+	StrokeGradientColor: React.Bindable<ColorSequence>?,
+	StrokeGradientRotation: React.Bindable<number>?,
+	StrokeGradientOffset: React.Bindable<Vector2>?,
+	StrokeGradientTransparency: React.Bindable<NumberSequence>?,
 
 	Transparency: useSingleTransparencyModifier.TransparencyValue?,
 }

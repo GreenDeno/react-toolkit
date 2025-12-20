@@ -6,7 +6,7 @@ local React = require(Libraries.React)
 local createElement = React.createElement
 
 export type Props = {
-	TextSizeMax: React.PropBinding<number>?,
+	TextSizeMax: React.Bindable<number>?,
 }
 
 return {

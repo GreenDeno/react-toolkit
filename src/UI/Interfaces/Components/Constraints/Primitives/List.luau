@@ -8,11 +8,11 @@ local React = require(Libraries.React)
 local createElement = React.createElement
 
 export type Props = {
-	ListFillDirection: React.PropBinding<Enum.FillDirection>?,
-	ListHorizontalAlignment: React.PropBinding<Enum.HorizontalAlignment>?,
-	ListVerticalAlignment: React.PropBinding<Enum.VerticalAlignment>?,
-	ListPadding: React.PropBinding<UDim>?,
-	ListSortOrder: React.PropBinding<Enum.SortOrder>?,
+	ListFillDirection: React.Bindable<Enum.FillDirection>?,
+	ListHorizontalAlignment: React.Bindable<Enum.HorizontalAlignment>?,
+	ListVerticalAlignment: React.Bindable<Enum.VerticalAlignment>?,
+	ListPadding: React.Bindable<UDim>?,
+	ListSortOrder: React.Bindable<Enum.SortOrder>?,
 }
 
 return {
