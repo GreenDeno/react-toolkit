@@ -9,9 +9,9 @@ local EPSILON = 1e-2
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local Libraries = ReplicatedStorage["New UI"].Libraries
-local Hooks = ReplicatedStorage["New UI"].Interfaces.Hooks
-local Utilities = ReplicatedStorage["New UI"].Utilities
+local Libraries = ReplicatedStorage.UI.Libraries
+local Hooks = ReplicatedStorage.UI.Interfaces.Hooks
+local Utilities = ReplicatedStorage.UI.Utilities
 
 local React = require(Libraries.React)
 
