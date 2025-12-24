@@ -6,16 +6,18 @@ local React = require(Libraries.React)
 local PrimitiveConstraints = script.Parent.Primitives
 
 local Corner = require(PrimitiveConstraints.Corner)
+local Padding = require(PrimitiveConstraints.Padding)
 local Stroke = require(PrimitiveConstraints.Stroke)
 local TextMaxSize = require(PrimitiveConstraints.TextMaxSize)
 
-export type Props = Stroke.Props & Corner.Props & TextMaxSize.Props
+export type Props = Stroke.Props & Corner.Props & TextMaxSize.Props & Padding.Props
 
 local createElement = React.createElement
 local constraints = {
 	uiCorner = Corner,
 	uiStroke = Stroke,
 	uiTextMaxSize = TextMaxSize,
+	uiPadding = Padding,
 }
 
 local function TextConstraints(props: Props)

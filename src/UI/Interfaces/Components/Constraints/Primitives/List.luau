@@ -13,6 +13,9 @@ export type Props = {
 	ListVerticalAlignment: React.Bindable<Enum.VerticalAlignment>?,
 	ListPadding: React.Bindable<UDim>?,
 	ListSortOrder: React.Bindable<Enum.SortOrder>?,
+	ListWraps: React.Bindable<boolean>?,
+
+	[typeof(React.Change.AbsoluteContentSize)]: ((listLayout: UIListLayout) -> ())?,
 }
 
 return {
@@ -22,6 +25,7 @@ return {
 			or props.ListVerticalAlignment ~= nil
 			or props.ListPadding ~= nil
 			or props.ListSortOrder ~= nil
+			or props.ListWraps ~= nil
 	end,
 	element = function(props: Props)
 		return createElement("UIListLayout", {
@@ -30,6 +34,9 @@ return {
 			VerticalAlignment = props.ListVerticalAlignment or Constants.DEFAULTS.LIST_VERTICAL_ALIGNMENT,
 			SortOrder = props.ListSortOrder or Constants.DEFAULTS.LIST_SORT_ORDER,
 			Padding = props.ListPadding,
+			Wraps = props.ListWraps,
+
+			[React.Change.AbsoluteContentSize] = props[React.Change.AbsoluteContentSize],
 		})
 	end,
 }

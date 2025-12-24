@@ -69,6 +69,7 @@ return function(props: {
 
 		LayoutOrder = props.LayoutOrder,
 		AutomaticSize = props.AutomaticSize,
+		BorderSizePixel = 0,
 
 		TextScaled = props.TextScaled ~= false,
 		TextWrapped = props.TextWrapped,
