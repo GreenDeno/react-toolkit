@@ -9,9 +9,9 @@ local EPSILON = 1e-2
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local Libraries = ReplicatedStorage.UI.Libraries
-local Hooks = ReplicatedStorage.UI.Interfaces.Hooks
-local Utilities = ReplicatedStorage.UI.Utilities
+local Libraries = ReplicatedStorage["New UI"].Libraries
+local Hooks = ReplicatedStorage["New UI"].Interfaces.Hooks
+local Utilities = ReplicatedStorage["New UI"].Utilities
 
 local React = require(Libraries.React)
 
@@ -55,15 +55,17 @@ local function useSingleTransparencyModifier(
 	transparency: TransparencyValue,
 	modifier: TransparencyValue?
 ): TransparencyBinding
+	local isModifierBinding = isReactBinding(modifier)
 	local isTransparencyBinding = isReactBinding(transparency)
+
 	local baseTransparency: TransparencyValue = if isTransparencyBinding
 		then (transparency :: TransparencyBinding):getValue()
 		else transparency or 0
 
-	local holderDependency = useBinding(nil)
+	local modifierDependency = if isModifierBinding then modifier :: TransparencyBinding else useBinding(modifier)
 	local transparencyDependency = if isTransparencyBinding
 		then transparency :: TransparencyBinding
-		else holderDependency
+		else useBinding(transparency)
 
 	local modifiedTransparency, updateModifiedTransparency = useBinding(baseTransparency)
 
@@ -79,7 +81,7 @@ local function useSingleTransparencyModifier(
 		else
 			updateModifiedTransparency(transparencyValue)
 		end
-	end, { (modifier or holderDependency) :: Binding<any>, transparencyDependency }, {
+	end, { modifierDependency, transparencyDependency }, {
 		baseTransparency,
 	})
 
